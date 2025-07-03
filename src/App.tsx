@@ -328,7 +328,7 @@ const Tab1: React.FC = () => {
                         {isStreaming ? 'Stop Camera' : 'Start Camera'} {model ? '(Model Ready)' : '(Loading...)'}
                     </button>
 
-                    <div style={{ marginTop: '20px', padding: '16px', backgroundColor: 'white', borderRadius: '4px', border: '1px solid #ddd', backgroundColor: '#007bff' }}>
+                    <div style={{ marginTop: '20px', padding: '16px', backgroundColor: '#007bff', borderRadius: '4px', border: '1px solid #ddd' }}>
                         <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500' }}>
                             Mosaic Size: {mosaicSize}px
                         </label>
