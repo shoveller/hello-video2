@@ -18,6 +18,10 @@ on:
     secrets:
       CLOUDFLARE_API_TOKEN:
         required: true
+    outputs:
+      deployment_url:
+        description: 'Final deployment URL (custom domain or original URL)'
+        value: ${{ jobs.update-dns.outputs.deployment_url }}
   workflow_dispatch:
     inputs:
       cname:
@@ -32,11 +36,6 @@ on:
         description: 'Subdomain for DNS updates'
         required: false
         type: string
-
-outputs:
-  deployment_url:
-    description: 'Final deployment URL (custom domain or original URL)'
-    value: ${{ jobs.update-dns.outputs.deployment_url }}
 
 jobs:
   update-dns:
